@@ -4,8 +4,8 @@
   "description": "simple boilerplate for apps with pug and sass with compilation etc",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
+    "dev": "rm -rf dist; webpack --mode development",
+    "build": "rm -rf dist; webpack --mode production && cp public/* dist",
     "serve": "webpack-dev-server --mode development --open"
   },
   "author": "obsidianical",

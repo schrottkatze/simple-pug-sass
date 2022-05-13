@@ -1,6 +1,6 @@
-const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 module.exports = {
   entry: "./src/scripts/app.ts",
   resolve: {
@@ -28,15 +28,9 @@ module.exports = {
       filename: "[name].css",
       chunkFilename: "[id].css",
     }),
-
     new HtmlWebPackPlugin({
       template: "./src/pages/index.pug",
       filename: "./index.html",
     }),
-    new HtmlWebPackPlugin({
-      template: "./src/pages/about.pug",
-      filename: "./about.html",
-    }),
-    // add one for each page
   ],
 };
